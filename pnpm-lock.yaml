@@ -59,7 +59,7 @@ importers:
         version: 7.2.0
       renovate:
         specifier: ^37.431.5
-        version: 37.431.5(@aws-sdk/client-sso-oidc@3.606.0(@aws-sdk/client-sts@3.606.0))(encoding@0.1.13)(typanion@3.14.0)
+        version: 37.431.6(@aws-sdk/client-sso-oidc@3.606.0(@aws-sdk/client-sts@3.606.0))(encoding@0.1.13)(typanion@3.14.0)
       std-env:
         specifier: ^3.7.0
         version: 3.7.0
@@ -454,6 +454,10 @@ packages:
     resolution: {integrity: sha512-7MbVt6xrwFQbunH2DNQsAP5sTGxfqQtErvBIvIMi6EQnbgUOuVYanvREcmFrOPhoXBrTtjhhP+lW+o5UfK+tDg==}
     engines: {node: '>=6.9.0'}
 
+  '@babel/helper-string-parser@7.24.8':
+    resolution: {integrity: sha512-pO9KhhRcuUyGnJWwyEgnRJTSIZHiT+vMD0kPeD+so0l7mxkMT19g3pjY9GTnHySck/hDzq+dtW/4VgnMkippsQ==}
+    engines: {node: '>=6.9.0'}
+
   '@babel/helper-validator-identifier@7.24.7':
     resolution: {integrity: sha512-rR+PBcQ1SMQDDyF6X0wxtG8QyLCgUB0eRAGguqRLfkCA87l7yAP7ehq8SNj96OOGTO8OBV70KhuFYcIkHXOg0w==}
     engines: {node: '>=6.9.0'}
@@ -472,6 +476,11 @@ packages:
 
   '@babel/parser@7.24.7':
     resolution: {integrity: sha512-9uUYRm6OqQrCqQdG1iCBwBPZgN8ciDBro2nIOFaiRz1/BCxaI7CNvQbDHvsArAC7Tw9Hda/B3U+6ui9u4HWXPw==}
+    engines: {node: '>=6.0.0'}
+    hasBin: true
+
+  '@babel/parser@7.24.8':
+    resolution: {integrity: sha512-WzfbgXOkGzZiXXCqk43kKwZjzwx4oulxZi3nq2TYL9mOjQv6kYwul9mz6ID36njuL7Xkp6nJEfok848Zj10j/w==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -519,6 +528,10 @@ packages:
 
   '@babel/types@7.24.7':
     resolution: {integrity: sha512-XEFXSlxiG5td2EJRe8vOmRbaXVgfcBlszKujvVmWIK/UpywWljQCfzAv3RQCGujWQ1RD4YYWEAqDXfuJiy8f5Q==}
+    engines: {node: '>=6.9.0'}
+
+  '@babel/types@7.24.9':
+    resolution: {integrity: sha512-xm8XrMKz0IlUdocVbYJe0Z9xEgidU7msskG8BbhnTPK/HZ2z/7FP7ykqPgrUH+C+r414mNfNWam1f2vqOjqjYQ==}
     engines: {node: '>=6.9.0'}
 
   '@breejs/later@4.2.0':
@@ -4265,8 +4278,8 @@ packages:
   remark@13.0.0:
     resolution: {integrity: sha512-HDz1+IKGtOyWN+QgBiAT0kn+2s6ovOxHyPAFGKVE81VSzJ+mq7RwHFledEvB5F1p4iJvOah/LOKdFuzvRnNLCA==}
 
-  renovate@37.431.5:
-    resolution: {integrity: sha512-0VUPLwspXCMkXrtF6BxqvJtmGxppNUBcriwEFVE2q4DdxAN4t3QeZnuUw/gfps+A0V9TJSyGiiWEwt0X/0M+0A==}
+  renovate@37.431.6:
+    resolution: {integrity: sha512-V5oLfXjDSJIb5++GAjGP7jvKZjattEhcMeEi4HzG+1eNb3p71TRIRxYcZHtHUiVlsecSsaeCslgbabWhvOP8Dw==}
     engines: {node: ^18.12.0 || >=20.0.0, pnpm: ^9.0.0}
     hasBin: true
 
@@ -6241,6 +6254,8 @@ snapshots:
 
   '@babel/helper-string-parser@7.24.7': {}
 
+  '@babel/helper-string-parser@7.24.8': {}
+
   '@babel/helper-validator-identifier@7.24.7': {}
 
   '@babel/helper-validator-option@7.24.7': {}
@@ -6260,6 +6275,10 @@ snapshots:
   '@babel/parser@7.24.7':
     dependencies:
       '@babel/types': 7.24.7
+
+  '@babel/parser@7.24.8':
+    dependencies:
+      '@babel/types': 7.24.9
 
   '@babel/plugin-syntax-jsx@7.24.7(@babel/core@7.24.7)':
     dependencies:
@@ -6330,6 +6349,12 @@ snapshots:
   '@babel/types@7.24.7':
     dependencies:
       '@babel/helper-string-parser': 7.24.7
+      '@babel/helper-validator-identifier': 7.24.7
+      to-fast-properties: 2.0.0
+
+  '@babel/types@7.24.9':
+    dependencies:
+      '@babel/helper-string-parser': 7.24.8
       '@babel/helper-validator-identifier': 7.24.7
       to-fast-properties: 2.0.0
 
@@ -7837,7 +7862,7 @@ snapshots:
 
   '@vue/compiler-core@3.4.27':
     dependencies:
-      '@babel/parser': 7.24.7
+      '@babel/parser': 7.24.8
       '@vue/shared': 3.4.27
       entities: 4.5.0
       estree-walker: 2.0.2
@@ -7850,7 +7875,7 @@ snapshots:
 
   '@vue/compiler-sfc@3.4.27':
     dependencies:
-      '@babel/parser': 7.24.7
+      '@babel/parser': 7.24.8
       '@vue/compiler-core': 3.4.27
       '@vue/compiler-dom': 3.4.27
       '@vue/compiler-ssr': 3.4.27
@@ -10670,7 +10695,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  renovate@37.431.5(@aws-sdk/client-sso-oidc@3.606.0(@aws-sdk/client-sts@3.606.0))(encoding@0.1.13)(typanion@3.14.0):
+  renovate@37.431.6(@aws-sdk/client-sso-oidc@3.606.0(@aws-sdk/client-sts@3.606.0))(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.606.0
       '@aws-sdk/client-ec2': 3.606.0
