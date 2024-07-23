@@ -73,8 +73,8 @@ importers:
         specifier: ^0.36.0
         version: 0.36.0(svelte@5.0.0-next.175)
       svelte-preprocess-budoux:
-        specifier: ^0.2.1
-        version: 0.2.1
+        specifier: ^0.4.0
+        version: 0.4.0
       sveltekit-html-minifier:
         specifier: ^1.0.3
         version: 1.0.3(@sveltejs/kit@2.5.18(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.175)(vite@5.3.3(@types/node@20.14.10)(terser@5.31.1)))(svelte@5.0.0-next.175)(vite@5.3.3(@types/node@20.14.10)(terser@5.31.1)))
@@ -4657,8 +4657,8 @@ packages:
     peerDependencies:
       svelte: ^3.0.0 || ^4.0.0 || ^5.0.0-next.1
 
-  svelte-preprocess-budoux@0.2.1:
-    resolution: {integrity: sha512-44Ppby+Er7VvhEsgDey/Co7zCd6Rj1lBH86RxVWXplcprEU3mvpB9mPgUdys1hpG0JTQXATUZfS/zLSsJKnUdQ==}
+  svelte-preprocess-budoux@0.4.0:
+    resolution: {integrity: sha512-kSCJbFb2taVNDsg+wZOIlT/d27kZ3/OU8ecbDtrzN3PLdJkXef11h258C11BzWA7RhqKTVzo0LSQpRJbXsyFjQ==}
 
   svelte-preprocess@5.1.4:
     resolution: {integrity: sha512-IvnbQ6D6Ao3Gg6ftiM5tdbR6aAETwjhHV+UKGf5bHGYR69RQvF1ho0JKPcbUON4vy4R7zom13jPjgdOWCQ5hDA==}
@@ -4705,6 +4705,10 @@ packages:
 
   svelte@5.0.0-next.175:
     resolution: {integrity: sha512-fWMI0O3PiKFWvTohAEJRkd6RymR3uo7PO8GrNfyx57KDvmmK1KYRzAdHjx+RsKl8oZhfWeJHiot6iebgY8lJng==}
+    engines: {node: '>=18'}
+
+  svelte@5.0.0-next.196:
+    resolution: {integrity: sha512-O4OO+HoPEwKP+0Z8BR90DI0R9Nb3GkXaN2hTagNWWJwyWB92uO4vPcufYoO41C9aReWELob/yODRDwXuuVqKZA==}
     engines: {node: '>=18'}
 
   sveltekit-html-minifier@1.0.3:
@@ -11239,11 +11243,18 @@ snapshots:
     dependencies:
       svelte: 5.0.0-next.175
 
-  svelte-preprocess-budoux@0.2.1:
+  svelte-parse-markup@0.1.5(svelte@5.0.0-next.196):
+    dependencies:
+      svelte: 5.0.0-next.196
+
+  svelte-preprocess-budoux@0.4.0:
     dependencies:
       budoux: 0.6.2
+      defu: 6.1.4
       estree-walker: 3.0.3
       magic-string-ast: 0.6.2
+      svelte: 5.0.0-next.196
+      svelte-parse-markup: 0.1.5(svelte@5.0.0-next.196)
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -11272,6 +11283,22 @@ snapshots:
       typescript: 5.5.3
 
   svelte@5.0.0-next.175:
+    dependencies:
+      '@ampproject/remapping': 2.3.0
+      '@jridgewell/sourcemap-codec': 1.4.15
+      '@types/estree': 1.0.5
+      acorn: 8.12.1
+      acorn-typescript: 1.4.13(acorn@8.12.1)
+      aria-query: 5.3.0
+      axobject-query: 4.0.0
+      esm-env: 1.0.0
+      esrap: 1.2.2
+      is-reference: 3.0.2
+      locate-character: 3.0.0
+      magic-string: 0.30.10
+      zimmerframe: 1.1.2
+
+  svelte@5.0.0-next.196:
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@jridgewell/sourcemap-codec': 1.4.15
